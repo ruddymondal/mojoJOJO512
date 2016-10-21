@@ -1,0 +1,488 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/shifter_5.v" into library work
+Parsing module <shifter_5>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/multiplier_7.v" into library work
+Parsing module <multiplier_7>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/division_8.v" into library work
+Parsing module <division_8>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/compare_6.v" into library work
+Parsing module <compare_6>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/boolean_4.v" into library work
+Parsing module <boolean_4>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/adder_3.v" into library work
+Parsing module <adder_3>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
+Parsing module <reset_conditioner_2>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/alu_1.v" into library work
+Parsing module <alu_1>.
+Analyzing Verilog file "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <alu_1>.
+
+Elaborating module <adder_3>.
+
+Elaborating module <boolean_4>.
+WARNING:HDLCompiler:634 - "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/boolean_4.v" Line 24: Net <preout[7]> does not have a driver.
+
+Elaborating module <shifter_5>.
+
+Elaborating module <compare_6>.
+
+Elaborating module <multiplier_7>.
+WARNING:HDLCompiler:634 - "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/multiplier_7.v" Line 20: Net <sum[63]> does not have a driver.
+
+Elaborating module <division_8>.
+
+Elaborating module <reset_conditioner_2>.
+WARNING:HDLCompiler:1127 - "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 56: Assignment to rst ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 50. All outputs of instance <reset_cond> of block <reset_conditioner_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <io_button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <io_dip<23:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/mojo_top_0.v" line 50: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 56
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 56
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 56
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 56
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 56
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 56
+    Summary:
+	inferred   6 Tristate(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <alu_1>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/alu_1.v".
+    Found 8-bit 4-to-1 multiplexer for signal <preout> created at line 110.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <alu_1> synthesized.
+
+Synthesizing Unit <adder_3>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/adder_3.v".
+WARNING:Xst:647 - Input <alufn<5:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit subtractor for signal <b[7]_unary_minus_1_OUT> created at line 27.
+    Found 8-bit adder for signal <preout> created at line 36.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <adder_3> synthesized.
+
+Synthesizing Unit <boolean_4>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/boolean_4.v".
+WARNING:Xst:647 - Input <a<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <preout<7>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<0>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<1>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<2>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<3>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<4>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<5>> created at line 32.
+    Found 1-bit 4-to-1 multiplexer for signal <preout<6>> created at line 32.
+    Summary:
+	inferred   7 Multiplexer(s).
+Unit <boolean_4> synthesized.
+
+Synthesizing Unit <shifter_5>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/shifter_5.v".
+WARNING:Xst:647 - Input <b<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn<7:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit shifter logical left for signal <a[7]_b[2]_shift_left_0_OUT> created at line 25
+    Found 8-bit shifter logical right for signal <a[7]_b[2]_shift_right_1_OUT> created at line 28
+    Found 8-bit shifter arithmetic right for signal <a[7]_b[2]_shift_right_2_OUT> created at line 31
+    Found 8-bit 3-to-1 multiplexer for signal <preout> created at line 23.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <shifter_5> synthesized.
+
+Synthesizing Unit <compare_6>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/compare_6.v".
+WARNING:Xst:647 - Input <alufn<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit subtractor for signal <GND_7_o_GND_7_o_sub_1_OUT<1:0>> created at line 32.
+    Found 5-bit shifter logical right for signal <n0010> created at line 32
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <compare_6> synthesized.
+
+Synthesizing Unit <multiplier_7>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/multiplier_7.v".
+WARNING:Xst:647 - Input <b<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <alufn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <sum<63:56>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit adder for signal <_n0097> created at line 22.
+    Found 8-bit adder for signal <_n0098> created at line 22.
+    Found 8-bit adder for signal <_n0099> created at line 22.
+    Found 8-bit adder for signal <_n0100> created at line 22.
+    Found 8-bit adder for signal <_n0101> created at line 22.
+    Found 8-bit adder for signal <sumofsum> created at line 22.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  28 Multiplexer(s).
+Unit <multiplier_7> synthesized.
+
+Synthesizing Unit <division_8>.
+    Related source file is "C:/Users/1001201/Downloads/mojoJOJO512/mojo2/mojo/mojo/1D8bitALU/work/planAhead/1D8bitALU/1D8bitALU.srcs/sources_1/imports/verilog/division_8.v".
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_2_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_6_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_9_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_12_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_15_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_18_OUT> created at line 28.
+    Found 8-bit subtractor for signal <GND_9_o_b[7]_sub_21_OUT> created at line 28.
+    Found 8-bit comparator lessequal for signal <n0000> created at line 27
+    Found 8-bit comparator lessequal for signal <n0005> created at line 27
+    Found 8-bit comparator lessequal for signal <n0010> created at line 27
+    Found 8-bit comparator lessequal for signal <n0015> created at line 27
+    Found 8-bit comparator lessequal for signal <n0020> created at line 27
+    Found 8-bit comparator lessequal for signal <n0025> created at line 27
+    Found 8-bit comparator lessequal for signal <n0030> created at line 27
+    Found 8-bit comparator lessequal for signal <n0035> created at line 27
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  14 Multiplexer(s).
+Unit <division_8> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 2-bit subtractor                                      : 1
+ 8-bit adder                                           : 7
+ 8-bit subtractor                                      : 8
+# Comparators                                          : 8
+ 8-bit comparator lessequal                            : 8
+# Multiplexers                                         : 54
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 4-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 11
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 4
+ 5-bit shifter logical right                           : 1
+ 8-bit shifter arithmetic right                        : 1
+ 8-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <multiplier_7>.
+	The following adders/subtractors are grouped into adder tree <Madd_sumofsum1> :
+ 	<Madd_sumofsum> in block <multiplier_7>, 	<Madd__n0097> in block <multiplier_7>, 	<Madd__n0098> in block <multiplier_7>, 	<Madd__n0099> in block <multiplier_7>, 	<Madd__n0100> in block <multiplier_7>, 	<Madd__n0101> in block <multiplier_7>.
+Unit <multiplier_7> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 2-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 8
+# Adder Trees                                          : 1
+ 8-bit / 7-inputs adder tree                           : 1
+# Comparators                                          : 8
+ 8-bit comparator lessequal                            : 8
+# Multiplexers                                         : 54
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 4-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 11
+ 8-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 4
+ 5-bit shifter logical right                           : 1
+ 8-bit shifter arithmetic right                        : 1
+ 8-bit shifter logical left                            : 1
+ 8-bit shifter logical right                           : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <alu_1> ...
+
+Optimizing unit <multiplier_7> ...
+
+Optimizing unit <division_8> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 368
+#      GND                         : 4
+#      INV                         : 1
+#      LUT2                        : 22
+#      LUT3                        : 29
+#      LUT4                        : 34
+#      LUT5                        : 61
+#      LUT6                        : 94
+#      MUXCY                       : 49
+#      MUXF7                       : 15
+#      VCC                         : 2
+#      XORCY                       : 57
+# IO Buffers                       : 72
+#      IBUF                        : 22
+#      OBUF                        : 44
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  241  out of   5720     4%  
+    Number used as Logic:               241  out of   5720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    241
+   Number with an unused Flip Flop:     241  out of    241   100%  
+   Number with an unused LUT:             0  out of    241     0%  
+   Number of fully used LUT-FF pairs:     0  out of    241     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          87
+ Number of bonded IOBs:                  72  out of    102    70%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 55.469ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 867290123 / 24
+-------------------------------------------------------------------------
+Delay:               55.469ns (Levels of Logic = 43)
+  Source:            io_dip<8> (PAD)
+  Destination:       io_led<16> (PAD)
+
+  Data Path: io_dip<8> to io_led<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            69   1.328   2.076  io_dip_8_IBUF (io_led_8_OBUF)
+     begin scope: 'alu:b<0>'
+     begin scope: 'alu/division:b<0>'
+     LUT2:I0->O            3   0.250   1.221  Msub_GND_9_o_b[7]_sub_2_OUT_cy<0>1 (Msub_GND_9_o_b[7]_sub_2_OUT_cy<0>)
+     LUT6:I0->O           18   0.254   1.343  b[7]_GND_9_o_LessThan_1_o1 (out<7>)
+     LUT3:I1->O            1   0.250   0.910  Mmux_n004411 (n0044<0>)
+     LUT6:I3->O            2   0.235   1.002  b[7]_GND_9_o_LessThan_5_o2 (b[7]_GND_9_o_LessThan_5_o1)
+     LUT6:I2->O            1   0.254   0.000  b[7]_GND_9_o_LessThan_5_o1_G (N54)
+     MUXF7:I1->O           1   0.175   0.682  b[7]_GND_9_o_LessThan_5_o1 (b[7]_GND_9_o_LessThan_5_o2)
+     LUT6:I5->O           22   0.254   1.764  b[7]_GND_9_o_LessThan_5_o21 (out<6>)
+     LUT5:I0->O            5   0.254   1.271  Mmux_n004621 (n0046<1>)
+     LUT6:I1->O            2   0.254   1.002  b[7]_GND_9_o_LessThan_8_o3 (b[7]_GND_9_o_LessThan_8_o1)
+     LUT6:I2->O            1   0.254   0.000  b[7]_GND_9_o_LessThan_8_o1_G (N52)
+     MUXF7:I1->O           1   0.175   1.112  b[7]_GND_9_o_LessThan_8_o1 (b[7]_GND_9_o_LessThan_8_o2)
+     LUT5:I0->O           23   0.254   1.788  b[7]_GND_9_o_LessThan_8_o2 (out<5>)
+     LUT5:I0->O            5   0.254   1.271  Mmux_n004821 (n0048<1>)
+     LUT6:I1->O            1   0.254   0.958  b[7]_GND_9_o_LessThan_11_o3 (b[7]_GND_9_o_LessThan_11_o1)
+     LUT5:I1->O            1   0.254   0.790  b[7]_GND_9_o_LessThan_11_o1_SW2 (N43)
+     LUT5:I3->O            1   0.250   1.112  b[7]_GND_9_o_LessThan_11_o1 (b[7]_GND_9_o_LessThan_11_o2)
+     LUT5:I0->O           22   0.254   1.764  b[7]_GND_9_o_LessThan_11_o2 (out<4>)
+     LUT5:I0->O            5   0.254   1.271  Mmux_n005021 (n0050<1>)
+     LUT6:I1->O            1   0.254   0.958  b[7]_GND_9_o_LessThan_14_o3 (b[7]_GND_9_o_LessThan_14_o1)
+     LUT5:I1->O            1   0.254   0.790  b[7]_GND_9_o_LessThan_14_o1_SW2 (N41)
+     LUT5:I3->O            1   0.250   1.112  b[7]_GND_9_o_LessThan_14_o1 (b[7]_GND_9_o_LessThan_14_o2)
+     LUT5:I0->O           22   0.254   1.764  b[7]_GND_9_o_LessThan_14_o2 (out<3>)
+     LUT5:I0->O            4   0.254   1.234  Mmux_n005221 (n0052<1>)
+     LUT6:I1->O            1   0.254   0.958  b[7]_GND_9_o_LessThan_17_o3 (b[7]_GND_9_o_LessThan_17_o1)
+     LUT5:I1->O            1   0.254   0.790  b[7]_GND_9_o_LessThan_17_o1_SW2 (N39)
+     LUT5:I3->O            1   0.250   1.112  b[7]_GND_9_o_LessThan_17_o1 (b[7]_GND_9_o_LessThan_17_o2)
+     LUT5:I0->O           19   0.254   1.691  b[7]_GND_9_o_LessThan_17_o2 (out<2>)
+     LUT5:I0->O            1   0.254   1.112  Mmux_n005421 (n0054<1>)
+     LUT6:I1->O            1   0.254   0.958  b[7]_GND_9_o_LessThan_20_o3 (b[7]_GND_9_o_LessThan_20_o1)
+     LUT5:I1->O            1   0.254   0.790  b[7]_GND_9_o_LessThan_20_o1_SW2 (N37)
+     LUT5:I3->O            1   0.250   1.112  b[7]_GND_9_o_LessThan_20_o1 (b[7]_GND_9_o_LessThan_20_o2)
+     LUT5:I0->O            6   0.254   1.306  b[7]_GND_9_o_LessThan_20_o2 (out<1>)
+     LUT5:I0->O            2   0.254   1.181  Mmux_n005641 (n0056<3>)
+     LUT6:I0->O            1   0.254   0.000  b[7]_GND_9_o_LessThan_23_o1_G (N56)
+     MUXF7:I1->O           2   0.175   1.156  b[7]_GND_9_o_LessThan_23_o1 (b[7]_GND_9_o_LessThan_23_o2)
+     LUT5:I0->O            1   0.254   0.000  b[7]_GND_9_o_LessThan_23_o2_G (N50)
+     MUXF7:I1->O           1   0.175   0.958  b[7]_GND_9_o_LessThan_23_o2 (out<0>)
+     end scope: 'alu/division:out<0>'
+     LUT6:I2->O            1   0.254   0.682  Mmux_preout_6 (Mmux_preout_6)
+     LUT6:I5->O            1   0.254   0.681  alufn<5>8 (out<0>)
+     end scope: 'alu:out<0>'
+     OBUF:I->O                 2.912          io_led_16_OBUF (io_led<16>)
+    ----------------------------------------
+    Total                     55.469ns (13.787ns logic, 41.682ns route)
+                                       (24.9% logic, 75.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.25 secs
+ 
+--> 
+
+Total memory usage is 260840 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
